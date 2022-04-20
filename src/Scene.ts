@@ -1,4 +1,4 @@
-import { AnimatedSprite, Container, Graphics, Texture } from "pixi.js";
+import { AnimatedSprite, Container, Texture } from "pixi.js";
 import { HEIGHT, WHIDTH } from ".";
 import { PhysiscContainer } from "./game/PhysiscContainer";
 import { Lokihat } from "./Lokihat";
@@ -49,13 +49,13 @@ export class Scene extends Container implements IUpdateable {
             this.physloki.y=500;
         this.addChild(this.physloki);
         
-        const auxZero=new Graphics();
+       /* const auxZero=new Graphics();
         auxZero.beginFill(0xff00ff);
         auxZero.drawCircle(0,0,10);
-        auxZero.endFill();
+        auxZero.endFill();*/
 
         this.physloki.addChild(this.lokiAnimated);
-        this.physloki.addChild(auxZero);
+        //this.physloki.addChild(auxZero);
 
 
     }
